@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Godot Projects"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.1", "Mobile")
+config/icon="res://icon.svg"
+config/windows_native_icon="res://fox jumping.ico"
+
+[autoload]
+
+Game="*res://Global/game.gd"
+Utils="*res://Global/utils.gd"
+
+[display]
+
+window/size/resizable=false
+window/vsync/vsync_mode=0
+
+[editor]
+
+movie_writer/disable_vsync=true
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"

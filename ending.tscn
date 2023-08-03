@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwnq0dfbvnhun"]
+
+[ext_resource type="Texture2D" uid="uid://cg2ntp0f2ipcu" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/environment/props/house.png" id="1_k125w"]
+[ext_resource type="Script" path="res://house.gd" id="1_pw1v5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbf4h"]
+size = Vector2(20, 30)
+
+[node name="House" type="Area2D"]
+script = ExtResource("1_pw1v5")
+
+[node name="House" type="Sprite2D" parent="."]
+position = Vector2(5, -16)
+texture = ExtResource("1_k125w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 21)
+shape = SubResource("RectangleShape2D_nbf4h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

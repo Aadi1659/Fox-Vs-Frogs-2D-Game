@@ -1,0 +1,14 @@
+res://Frog.tscn
+res://main.tscn
+res://Player/player.tscn
+res://BG.tscn
+res://Collectables/Cherry.tscn
+res://world.tscn
+res://ending.tscn
+res://UI.gd
+res://spikes.tscn
+res://spikes.gd
+res://lava.tscn
+res://lava.gd
+res://Frog.gd
+res://Player/player.gd

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddh624yw3qdy7"]
+
+[ext_resource type="Script" path="res://spikes.gd" id="1_h8q4m"]
+[ext_resource type="Texture2D" uid="uid://ciewijyw4q3nk" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/environment/props/spikes.png" id="1_hbr3c"]
+[ext_resource type="AudioStream" uid="uid://dvvwxo2qmhlgx" path="res://audio/hurt.mp3" id="3_ihpps"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2iniq"]
+size = Vector2(34, 27)
+
+[node name="Spikes" type="Area2D"]
+script = ExtResource("1_h8q4m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_2iniq")
+
+[node name="Spikes" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, -6)
+scale = Vector2(2.19167, 2.925)
+texture = ExtResource("1_hbr3c")
+
+[node name="death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ihpps")
+volume_db = 19.479
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
